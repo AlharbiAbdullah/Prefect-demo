@@ -6,12 +6,18 @@ description: null
 version: 8858aef1215fd1885405724f2d7fd09d
 # The work queue that will handle this deployment's runs
 work_queue_name: default
-work_pool_name: null
+work_pool_name: default-agent-pool
 tags: []
 parameters: {}
 schedule: null
-is_schedule_active: null
+is_schedule_active: true
 infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: hello-world
+manifest_path: null
 infrastructure:
   type: process
   env: {}
@@ -20,16 +26,22 @@ infrastructure:
   command: null
   stream_output: true
   working_dir: null
+  _block_document_id: 6ed02151-fe56-4557-8169-501018605e73
+  _block_document_name: anonymous-2e09b0e1-8057-4cac-ad3d-02f83f4803d8
+  _is_anonymous: true
   block_type_slug: process
   _block_type_slug: process
-
-###
-### DO NOT EDIT BELOW THIS LINE
-###
-flow_name: hello-world
-manifest_path: null
-storage: null
-path: /home/abdullah/onmytable/learning/learning_prefect
+storage:
+  repository: https://github.com/AlharbiAbdullah/Prefect-demo.git
+  reference: null
+  access_token: '**********'
+  include_git_objects: true
+  _block_document_id: 13cb5faa-d8b4-4838-b2a6-6df5d6589db6
+  _block_document_name: prefect-repo
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
 entrypoint: hello.py:hello_world
 parameter_openapi_schema:
   title: Parameters
@@ -37,4 +49,4 @@ parameter_openapi_schema:
   properties: {}
   required: null
   definitions: null
-timestamp: '2023-03-17T15:51:45.570002+00:00'
+timestamp: '2023-03-17T16:44:09.911346+00:00'
